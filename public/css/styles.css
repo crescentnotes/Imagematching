@@ -1,0 +1,406 @@
+:root {
+    --box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    --bg: #f2f2f2;
+    --black: #222;
+    --white: white;
+    --primary-color: black; /* Primary color */
+    --hover-color: grey; /* Hover color */
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    background: var(--bg);
+}
+
+/* Header */
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    z-index: 1000;
+    padding: 0 1rem; /* Reduced padding */
+}
+
+.Header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.Header .logo img {
+    height: 3rem; /* Reduced logo height */
+    border-radius: 35px;
+    padding: 0.5rem; /* Reduced padding */
+}
+
+.Header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Header .navbar a {
+    margin: 0 1rem; /* Reduced margin */
+    padding: 3px; /* Reduced padding */
+    font-size: 1.2rem; /* Reduced font size */
+    color: var(--black);
+}
+
+#menu-btn {
+    display: none;
+}
+
+/* Image Upload Section */
+.container {
+    display: flex;
+    width: 99vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-image: url(../images/home.jpg);
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image within the container */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.box {
+    background-color: rgb(258, 258, 258);
+    padding: 1.5rem; /* Reduced padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Centering the logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Logo image (now rectangular) */
+.logo img {
+    max-width: 200px;  /* Set a max width to fit the form */
+    height: auto;      /* Maintain the aspect ratio */
+}
+
+.heading {
+    text-align: center;
+    color: var(--black);
+    text-transform: uppercase;
+    margin: 1rem 0; /* Reduced margin */
+    font-size: 1.5rem; /* Reduced font size */
+}
+
+.selection {
+    width: 100%;
+}
+
+.selection label {
+    margin: 0.5rem 0;
+    display: block;
+    font-size: 1.1rem; /* Reduced font size */
+    color: var(--black);
+}
+
+.selection input[type="file"] {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.selection button {
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 0.9rem; /* Reduced font size */
+    cursor: pointer;
+    padding: 0.8rem 1.5rem; /* Reduced padding */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.selection button:hover {
+    background-color: var(--hover-color);
+}
+
+#matching-result p {
+    text-align: center;
+    font-size: 1rem; /* Reduced font size */
+    color: var(--black);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+.footer-column p, .footer-column a, .footer-column ul, .footer-column li {
+    margin: 5px 0;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-column img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* contact */
+
+.contact {
+    background: var(--bg);
+    padding: 0rem 6rem; /* Reduce padding */
+}
+
+.contact .contactrow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem; /* Reduce gap between elements */
+}
+
+.contact .contactrow .image {
+    flex: 1 1 40rem;
+    
+}
+
+.contact .contactrow .image img {
+    width: 100%;
+}
+
+.contact .contactrow form {
+    flex: 1 1 30rem;
+    border: .1rem solid var(--black);
+    padding: 1rem; /* Reduce padding */
+    height: 70vh;
+}
+
+.contact .contactrow form h3 {
+    font-size: 2.5rem; /* Optionally reduce font size */
+    text-align: center;
+    padding-bottom: 0.5rem; /* Reduce padding */
+    color: var(--black);
+}
+
+.contact .contactrow form span {
+    display: flex;
+    padding-bottom: 0.5rem; /* Reduce padding */
+    color: var(--black);
+    font-size: 1.4rem; /* Optionally reduce font size */
+}
+
+.contact .contactrow form .box1 {
+    width: 100%;
+    background: none;
+    border-bottom: .1rem solid var(--black);
+    font-size: 1.4rem; /* Optionally reduce font size */
+    color: var(--black);
+    text-transform: none;
+    padding: .25rem 0; /* Reduce padding */
+    margin-bottom: 0.5rem; /* Reduce margin */
+}
+
+.contact .contactrow form textarea {
+    height: 10rem; /* Reduce height */
+    resize: none;
+    padding: 0.5rem; /* Optionally adjust padding */
+}
+
+
+/* contact */
+
+/* buttons */
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    background: var(--black);
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 1rem 3rem; 
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+.heading{
+    text-align: center;
+    color: var(--black);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.heading span{
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+/* buttons */
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .Header {
+        padding: 1rem 1.5rem; /* Reduced padding */
+    }
+
+    .Header .navbar a {
+        font-size: 1.2rem; /* Adjusted font size */
+    }
+
+    .container {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: block;
+        font-size: 3rem; /* Reduced font size */
+    }
+
+    .fa-times {
+        transform: rotate(180deg);
+    }
+
+    .Header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        border-top: 0.1rem solid var(--primary-color);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .Header .navbar a {
+        margin: 1rem;
+        font-size: 1.6rem; /* Reduced font size */
+        color: var(--black);
+    }
+
+    .Header .navbar a:hover {
+        color: var(--primary-color);
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Space out items evenly */
+    align-items: center; /* Center align items vertically */
+    margin-top: 20px; /* Space above the container */
+    height: 80vh;
+}
+
+.image-container {
+    flex: 1; /* Allow images to take equal space */
+    text-align: center; /* Center align text within image containers */
+}
+
+.info-container {
+    flex: 1; /* Allow info container to take equal space */
+    text-align: center; /* Center align text within info container */
+    margin: 0 20px; /* Add some margin for spacing */
+}
+
+/* Set a fixed height for images while maintaining aspect ratio */
+.image {
+    height: 300px; /* Set your desired height */
+    width: auto; /* Automatically adjust width to maintain aspect ratio */
+    max-width: 100%; /* Prevent overflow */
+}
+
+

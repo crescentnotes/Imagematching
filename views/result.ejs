@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+<div class="flex-container">
+    <div class="image-container">
+        <h2>Uploaded Image</h2>
+        <img src="<%= uploadedImage %>" alt="Uploaded Image" class="image">
+    </div>
+    
+    <div class="info-container">
+        <h3>Match Information</h3>
+        <p>Name: <%= personInfo.name %></p>
+        <p>RRN: <%= personInfo.rrn %></p>
+        <p>Department: <%= personInfo.department %></p>
+        <p>Year: <%= personInfo.year %></p>
+        <p>Section: <%= personInfo.section %></p>
+        <p>Match Result: <%= matchResult %></p>
+        <p>Match Score: <%= matchScore %></p>
+    </div>
+
+    <div class="image-container">
+        <h2>Matched Image</h2>
+        <% if (matchedImage) { %>
+            <img src="<%= matchedImage %>" alt="Matched Image" class="image">
+        <% } else { %>
+            <p>No matched image available.</p>
+        <% } %>
+    </div>
+</div>
+
+    
+    <%- include('partials/footer') %>

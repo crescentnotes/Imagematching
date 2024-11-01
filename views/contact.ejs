@@ -1,0 +1,41 @@
+<%- include('partials/header', { title: 'About - Image Upload' }) %>
+
+<!-- About Section -->
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>contact</span></h1>
+
+    <div class="contactrow">
+
+        <div class="image">
+            <img src="/images/contact.png" alt="contact.png">
+        </div>
+         
+        <form action="/contact" method="POST" >
+            <h3>get in touch</h3>
+
+            <span>your name</span>
+            <input type="text" name="name" class="box1" required>
+
+            <span>your email</span>
+            <input type="email" name="email" class="box1" required>
+
+            <span>your message</span>
+            <textarea class="box1" name="message" cols="30" rows="10" placeholder="Write your message or ask any questions" ></textarea>
+
+            <input type="submit" value="contact" class="btn" required>
+            <% if (locals.loginsucess) { %>
+                <h1>
+                  <%= loginsucess %>
+                   
+                </h1>
+                <% } else { %>
+                  <h1> </h1>
+                  <% } %>
+        </form>
+
+    </div>
+
+</section>
+
+<%- include('partials/footer') %>
